@@ -28,7 +28,7 @@ If `basePath` is set in next.config, then the `basePath` needs to also be set in
 
 ![alt text](assets/basePathNextConfig.png)
 
-Once `basePath` is added in both places, the auth flow will prompt you to login. Once you log in the callback url will still point to the default basePath. You will be redirected to something like this: `/api/auth/oauth2/callback/keycloak...` without any base path.
+Once `basePath` is added in nextConfig and authClient, the auth flow will prompt you to login as expected. Once you login, the callback url will still point to the default basePath (`/api/auth`) which is not available. For example, the redirect looks something like this: `/api/auth/oauth2/callback/keycloak...` without any base path.
 
 ![alt text](assets/basePathAuthClient.png)
 
