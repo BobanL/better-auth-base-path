@@ -13,7 +13,7 @@ export default function Home() {
             onClick={async () => {
               await authClient.signIn.oauth2({
                 providerId: "keycloak",
-                callbackURL: "/",
+                callbackURL: "/basePath",
               });
             }}
           >
